@@ -102,6 +102,14 @@
       font-style: normal;
     }
 
+    .text .line2 {
+      margin-top: 0; /* gap added in mobile breakpoint only */
+    }
+
+    .mobile-break {
+      display: none;
+    }
+
     .text a {
       color: #A4A4A4;
       text-decoration: none;
@@ -129,12 +137,25 @@
       .content {
         flex-direction: column;
         align-items: flex-start;
-        padding: 32px 28px;
-        gap: 20px;
+        padding: 28px 24px;
+        gap: 16px;
+      }
+
+      .logo {
+        width: 110px;
       }
 
       .text {
         margin-bottom: 0;
+      }
+
+
+      .text .line2 {
+        margin-top: 0.75em;
+      }
+
+      .mobile-break {
+        display: inline;
       }
     }
   </style>
@@ -159,7 +180,8 @@
 
     <!-- Text -->
     <div class="text">
-      <p>Astet is evolving. Our new website will launch soon.<br>For enquiries, please contact <a href="mailto:hello@astetstudio.com">hello@astetstudio.com</a></p>
+      <p class="line1">Astet is evolving. Our new <span class="mobile-break"><br></span>website will launch soon.</p>
+      <p class="line2">For enquiries, please contact <span class="mobile-break"><br></span><a href="mailto:hello@astetstudio.com">hello@astetstudio.com</a></p>
     </div>
 
   </div>
