@@ -40,6 +40,8 @@
       line-height: var(--line-height);
       color: var(--beige);
       background: #1a1008;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     /* Background image */
@@ -106,19 +108,15 @@
       font-style: normal;
     }
 
-    .text p + p {
-      margin-top: 0.6em;
-    }
-
     .text a {
-      color: var(--beige);
+      color: #A4A4A4;
       text-decoration: none;
-      border-bottom: 1px solid rgba(249, 249, 246, 0.45);
-      transition: border-color 0.2s ease;
+      transition: text-decoration 0.15s ease;
     }
 
     .text a:hover {
-      border-color: var(--beige);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     /* Fade-in animation */
@@ -132,28 +130,16 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── Tablet ───────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .content {
-        padding: 36px 40px;
-        gap: 40px;
-      }
-    }
-
-    /* ── Mobile ───────────────────────────────────────────── */
-    @media (max-width: 600px) {
+    /* Stack below logo the moment viewport can't fit both on one line */
+    @media (max-width: 720px) {
       .content {
         flex-direction: column;
         padding: 32px 28px;
-        gap: 24px;
+        gap: 20px;
       }
 
-      .logo {
-        width: 120px;
-      }
-
-      .text p {
-        font-size: 18px;
+      .text {
+        padding-top: 0;
       }
     }
   </style>
@@ -183,8 +169,7 @@
 
     <!-- Text -->
     <div class="text">
-      <p>Astet is evolving. Our new website will launch soon.</p>
-      <p>For enquiries, please contact <a href="mailto:hello@aStetstudio.com">hello@astetstudio.com</a></p>
+      <p>Astet is evolving. Our new website will launch soon.<br>For enquiries, please contact <a href="mailto:hello@astetstudio.com">hello@astetstudio.com</a></p>
     </div>
 
   </div>
